@@ -1,0 +1,59 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using PlanetarioAPI.Models;
+
+
+
+<div class="col-lg-12">
+
+    <div class="text-center col-lg-12">
+        <h1> Planeta @Model.name</h1>
+    </div>
+    <br /><br /><br />
+    <div class="col-md-8">
+
+        <h6>Climate : @Model.climate</h6>
+        <h6>Created : @Model.created</h6>
+        <h6>Diameter : @Model.diameter</h6>
+        <h6>Edited : @Model.edited</h6>
+
+        @if (Model.films.Count >0)
+        {
+            <p>Films</p>
+            foreach (var film in Model.films)
+            {
+                <h6>@film</h6>
+            }
+        }
+        <h6>
+            Gravity : @Model.gravity
+        </h6>
+
+        <h6>Orbital Period : @Model.orbital_period</h6>
+        <h6>Population : @Model.population </h6>
+
+        @if (Model.residents.Count > 0)
+        {
+            <h6>Residents</h6>
+            <br />
+
+            foreach (var resident in @Model.residents)
+            {
+                <h6>
+                    @resident
+                </h6>
+            }
+
+        }
+        <h6>Rotation Period : @Model.rotation_period </h6>
+        <h6>Surface Water : @Model.surface_water</h6>
+        <h6>Terrain : @Model.terrain </h6>
+        <h6>URL : @Model.url </h6>
+
+
+    </div>
+
+
+</div>

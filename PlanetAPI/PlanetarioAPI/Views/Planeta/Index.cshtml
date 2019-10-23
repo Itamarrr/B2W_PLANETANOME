@@ -1,0 +1,28 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<h1>Planetário</h1>
+
+<br />
+<br />
+
+@using (Html.BeginForm("Planeta", "Planeta", FormMethod.Get))
+{
+    <h3>Consultar Planeta</h3>
+
+    <h6> Digite o ID do Planeta: </h6>
+    <div>
+        <input type="text" name="id" id="id" />
+    </div>
+
+    <div>
+        <div class="row">
+            <input type="submit" value="Consultar" />
+        </div>
+    </div>
+
+}
